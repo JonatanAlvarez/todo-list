@@ -1,0 +1,49 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.9);
+    z-index: 100;
+    form {
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 3px;
+        max-width: 100%;
+        h2 {
+            margin-top: 0;
+        }
+        textarea {
+            height: 200px;
+            width: 300px;
+            max-width: 100%;
+            padding: 15px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .radios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            div {
+                margin: 5px 15px;
+                color: #fff;
+                padding: 10px 15px;
+                border-radius: 3px;
+                &:nth-child(1) {
+                    background-color: orangered;
+                }
+                &:nth-child(2) {
+                    background-color: green;
+                }
+            }
+        }
+        .btn {
+            margin-top: 25px;
+            float: right;
+        }
+    }
+}

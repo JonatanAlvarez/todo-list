@@ -1,0 +1,18 @@
+<div class="list table">
+    <div class="row title">
+        <div class="id">ID</div>
+        <div class="description">Descripción</div>
+        <div class="status">Estado</div>
+        <div class="file">Archivo</div>
+    </div>
+    <div class="row" *ngFor="let todo of todoService.todos">
+        <div class="id">{{ todo.id }}</div>
+        <div class="description" (click)="showTodo(todo.id)">{{ todo.description }}</div>
+        <div class="status">
+            <span class="{{ todo.status }}">{{ todo.status }}</span>
+        </div>
+        <div class="file">
+            <a *ngIf="todo.file != undefined" href="{{ todo.file }}"><i class="fas fa-download"></i></a>
+        </div>
+    </div>
+</div>

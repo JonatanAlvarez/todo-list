@@ -1,0 +1,21 @@
+<div class="overlay" (click)="close($event)">
+    <form class="form" (ngSubmit)="onSubmit()">
+        <h2>TODO</h2>
+        <textarea [(ngModel)]="todo.description" name="description" placeholder="Ingresa la tarea por hacer"></textarea>
+        <div class="uploadFile">
+            <input [(ngModel)]="file" type="file" name="file" id="file" (change)="onFileChange($event)">
+            <button type="button" (click)="clearFile()">x</button>
+        </div>
+        <div class="radios">
+            <div>
+                <input [(ngModel)]="todo.status" type="radio" name="status" id="pending" value="pendiente" />
+                <label for="pending" (click)="todo.status = 'pendiente'">Pendiente</label>
+            </div>
+            <div>
+                <input [(ngModel)]="todo.status" type="radio" name="status" id="resolved" value="resuelto" />
+                <label for="resolved" (click)="todo.status = 'resuelto'">Resuelto</label>
+            </div>
+        </div>
+        <button class="btn" type="submit" >Guardar</button>
+    </form>
+</div>

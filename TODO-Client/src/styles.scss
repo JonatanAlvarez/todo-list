@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+/* Eina Regular */
+@font-face {
+    font-family: 'Eina';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Eina'), local('Eina-Regular'), url(assets/fonts/eina-regular.woff2) format('woff2');
+}
+/* Eina Bold */
+@font-face {
+    font-family: 'Eina';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Eina'), local('Eina-Bold'), url(assets/fonts/eina-bold.woff2) format('woff2');
+}
+/* Eina SemiBold */
+@font-face {
+    font-family: 'Eina';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Eina'), local('Eina-Semibold'), url(assets/fonts/eina-semibold.woff2) format('woff2');
+}
+/* Eina SemiBold */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Inter'), local('Inter-Semibold'), url(assets/fonts/Inter-SemiBold.woff2) format('woff2');
+}
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v7/L0x5DF4xlVMF-BfR8bXMIjhGq3-OXg.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+body {
+    color:#596a89;
+    font-family: 'Eina', sans-serif;
+}
+h1, h2 {
+    letter-spacing: -.04em;
+    color: #020814;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Eina', sans-serif;
+}
+
+.btn {
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4a8bfc;
+    letter-spacing: -.03em;
+    line-height: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    vertical-align: middle;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    transition: .3s box-shadow,.3s background;
+    top: -2px;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(74,139,252,.9);
+    }
+    &:active {
+        box-shadow: inset 0 1px 4px rgba(0,0,0,.2);
+    }
+}
+
+input[type=text] {
+    height: 48px;
+    border-radius: 3px;
+    background: #f8fafc;
+    border: 1px solid #e9edf3;
+    padding: 0 15px;
+    transition: border-color .2s,background-color .2s;
+}
+

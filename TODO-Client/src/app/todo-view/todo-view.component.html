@@ -1,0 +1,22 @@
+<div class="overlay" (click)="close($event)">
+    <form class="form" (ngSubmit)="onSubmit()">
+        <h2>TODO #{{ todo.id }}</h2>
+        <div class="downloadFile" *ngIf="todo.file != undefined">
+            <img *ngIf="isImg" src="{{ todo.file }}" />
+            <i *ngIf="!isImg"class="fas fa-file-download" style="font-size: 48px;"></i>
+            <a class="btn" href="{{ todo.file }}"><i class="fas fa-download"></i> Download</a>
+        </div>
+        <textarea [ngModel]="todo.description" name="description" placeholder="Ingresa la tarea por hacer" disabled></textarea>
+        <div class="radios">
+            <div>
+                <input [(ngModel)]="todo.status" type="radio" name="status" id="pending" value="pendiente" />
+                <label for="pending" (click)="todo.status = 'pendiente'">Pendiente</label>
+            </div>
+            <div>
+                <input [(ngModel)]="todo.status" type="radio" name="status" id="resolved" value="resuelto" />
+                <label for="resolved" (click)="todo.status = 'resuelto'">Resuelto</label>
+            </div>
+        </div>
+        <button class="btn" type="submit">Guardar</button>
+    </form>
+</div>

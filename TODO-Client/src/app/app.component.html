@@ -1,0 +1,29 @@
+<main>
+  <header>
+    <h1>{{ title }}</h1>
+    <span>Por Jonatan Alvarez</span>
+  </header>
+  <section>
+    <div class="toolbar">
+        <a class="btn" routerLink="/todo/add">Nuevo TODO</a>
+    </div>                                           
+    <div class="filter">
+      <form (ngSubmit)="filter()">
+        <input [(ngModel)]="text" type="text" name="search" placeholder="Buscar por ID o Descripción"/>
+        <div class="checks">
+          <div>
+            <input [(ngModel)]="pending" type="checkbox" name="peding" id="pending" value="pendiente" />
+            <label for="pending">Pendientes</label>
+          </div>
+          <div>
+            <input [(ngModel)]="resolved" type="checkbox" name="resolved" id="resolved" value="resuelto" />
+            <label for="resolved">Resueltos</label>
+          </div>
+        </div>
+        <input class="btn" type="submit" value="Buscar" />
+      </form>
+    </div>
+    <app-todo-list></app-todo-list>
+  </section>
+  <router-outlet></router-outlet>
+</main>
