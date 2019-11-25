@@ -11,7 +11,7 @@ import { TodoService } from '../service/todo.service';
 export class TodoViewComponent implements OnInit {
 
   private id: string;
-  private todo: Todo;
+  private todo = new Todo();
   private isImg = false;
 
   constructor(private route: ActivatedRoute, private router: Router, private todoService: TodoService) { }
