@@ -86,7 +86,7 @@ Si usa Maven, puede ejecutar la aplicación situándose en la carpeta TODO-API y
     
 #### CLIENT ANGULAR
 
-Ejecute `ng serve --open` para correr la aplicación. Se abrirá automáticamente un navegador hacia `http://localhost:4200/`
+Ejecute `npm install` para descargar las dependencias. Al finalizar ejecute `npm start` o `ng serve --open` para correr la aplicación. Se abrirá automáticamente un navegador hacia `http://localhost:4200/`
 
 ### Autor
 - - - - - - - - - 
